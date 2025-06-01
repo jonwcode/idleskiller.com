@@ -1,0 +1,158 @@
+/* Styles for the background */
+.screen {
+  overflow: hidden;
+  z-index: 3;
+  position: relative;
+  width: 100%;
+}
+
+.screen::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 97%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("https://assets.idleskiller.com/images/backgrounds/mining_bg_day_phone.webp");
+  filter: blur(4px);
+  background-color: rgb(17, 39, 61);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50px;
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.87) 100%
+  );
+  mask-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.81) 100%
+  );
+}
+
+/* Change the background image based on screen size */
+@media (min-width: 600px) {
+  .screen::before {
+    background-image: url("https://assets.idleskiller.com/images/backgrounds/mining_bg_day.webp");
+    background-size: cover;
+  }
+}
+
+.screen::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(27, 43, 60);
+  background: linear-gradient(
+    36deg,
+    rgba(27, 43, 60, 0.95) 15%,
+    rgba(21, 34, 47, 0.89) 18%,
+    rgb(13, 23, 31) 88%
+  );
+  z-index: 1;
+}
+
+/* END */
+
+.skillContainer {
+  width: 100%;
+  position: relative;
+  backdrop-filter: blur(90%);
+  overflow-y: auto;
+  background: rgb(27, 43, 60);
+  background: linear-gradient(
+    36deg,
+    rgba(13, 23, 31, 0.55) 15%,
+    rgba(16, 29, 42, 0.63) 88%
+  );
+  border-radius: 20px;
+  height: 100%;
+  margin: auto;
+  z-index: 3;
+  border: 2px solid rgb(11, 11, 15);
+  outline: 2px solidrgb(31, 36, 53);
+}
+
+.actionButton {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000000;
+}
+
+.actionButton {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  transform: translateY(-100%);
+  width: 100%;
+}
+
+.actionButton button {
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+  user-select: none;
+}
+
+.actionButton button:active {
+  opacity: 0.7;
+}
+
+.actionButtonStart button {
+  background: rgb(51, 136, 51);
+  background: rgb(51, 136, 51);
+  background: linear-gradient(
+    56deg,
+    rgba(51, 136, 51, 1) 16%,
+    rgba(120, 189, 75, 0.790375525210084) 35%,
+    rgba(4, 166, 80, 0.9472382703081232) 75%
+  );
+
+  border-top: 1px solid green;
+}
+
+.actionButtonStop button {
+  background: rgb(132, 33, 62);
+  background: linear-gradient(
+    56deg,
+    rgba(132, 33, 62, 1) 16%,
+    rgba(189, 75, 100, 0.790375525210084) 35%,
+    rgba(157, 65, 82, 0.9472382703081232) 75%
+  );
+  border-top: 1px solid red;
+}
+
+.actionButtonGrayOut button {
+  background: rgb(119, 149, 119);
+  background: linear-gradient(
+    56deg,
+    rgba(184, 183, 183, 0.62) 16%,
+    rgba(134, 134, 134, 0.55) 35%,
+    rgba(161, 161, 161, 0.95) 75%
+  );
+  border-top: 1px solidrgb(186, 186, 186);
+  color: rgb(22, 22, 22) !important;
+}
+
+.actionButtonGrayOut button:active {
+  background: rgb(132, 33, 62);
+  background: linear-gradient(
+    56deg,
+    rgba(132, 33, 62, 1) 16%,
+    rgba(189, 75, 100, 0.790375525210084) 35%,
+    rgba(157, 65, 82, 0.9472382703081232) 75%
+  );
+  border-top: 1px solid red;
+  color: #ffffff !important;
+}

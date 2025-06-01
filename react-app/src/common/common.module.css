@@ -1,0 +1,11 @@
+.flex {
+  display: flex;
+}
+.box {
+  /* All required properties for the box component goes here */
+}
+
+.text {
+  padding: 0;
+  margin: 0;
+}

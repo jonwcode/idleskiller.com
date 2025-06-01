@@ -1,0 +1,26 @@
+.screen {
+	min-height: 100vh;
+}
+.buttonContainer a {
+	width: 90%;
+	margin-bottom: 20px;
+	font-weight: bold;
+	color: #b5b5b5;
+	background: linear-gradient(145deg, #121c2b, #1c2a3a);
+	color: white;
+	border: none;
+	padding: 12px 24px;
+	font-size: 1.1rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	box-shadow: 0 0 6px rgba(0, 150, 255, 0.4);
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 10px;
+}
+.buttonContainer a:hover {
+	border-radius: 6px !important; /* Ensure radius persists */
+	background: rgba(0, 0, 0, 0.2); /* Subtle press effect */
+	transform: scale(0.98); /* Slight press-down effect */
+}

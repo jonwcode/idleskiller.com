@@ -1,0 +1,93 @@
+.passMeter {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	display: flex;
+	--pass-meter-default-bg: rgb(34, 48, 61);
+	--pass-meter-default-borderColor: rgb(30, 44, 58);
+	--meter-1: rgb(160, 61, 61);
+	--meter-2: rgb(204, 159, 25);
+	--meter-3: rgb(100, 134, 77);
+	--meter-4: rgb(13, 218, 13);
+}
+
+.passMeter span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: var(--pass-meter-default-bg);
+	border-left: 1px solid var(--pass-meter-default-borderColor);
+}
+
+.passMeter span:last-child {
+	border-right: 1px solid var(--pass-meter-default-borderColor);
+}
+
+.passMeter::before {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: var(--pass-meter-default-bg);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.passMeter::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: var(--pass-meter-default-bg);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.passMeter[data-meter] span:first-child::before {
+	font-size: 10px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) translateX(-100%);
+	width: max-content;
+	left: calc(0% - 5px);
+}
+
+.passMeter[data-meter="1"] span:first-child::before {
+	content: "Very weak";
+	color: var(--meter-1);
+}
+
+.passMeter[data-meter="1"]::before {
+	background-color: var(--meter-1) !important;
+}
+
+.passMeter[data-meter="2"] span:first-child::before {
+	content: "weak";
+	color: var(--meter-2);
+}
+
+.passMeter[data-meter="2"]::before,
+.passMeter[data-meter="2"] span:first-child {
+	background-color: var(--meter-2) !important;
+}
+
+.passMeter[data-meter="3"] span:first-child::before {
+	content: "fair";
+	color: var(--meter-3);
+}
+
+.passMeter[data-meter="3"]::before,
+.passMeter[data-meter="3"] span:first-child,
+.passMeter[data-meter="3"] span:last-child {
+	background-color: var(--meter-3) !important;
+}
+
+.passMeter[data-meter="4"] span:first-child::before {
+	content: "good";
+	color: var(--meter-4);
+}
+
+.passMeter[data-meter="4"]::before,
+.passMeter[data-meter="4"] span:first-child,
+.passMeter[data-meter="4"] span:last-child,
+.passMeter[data-meter="4"]::after {
+	background-color: var(--meter-4) !important;
+}

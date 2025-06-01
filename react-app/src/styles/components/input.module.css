@@ -1,0 +1,148 @@
+:root {
+	--primary-inputColor: rgb(195, 200, 211);
+	--primary-focusColor: rgb(144, 170, 213);
+	--primary-borderColor: rgb(36, 56, 76);
+	--primary-backgroundColor: rgb(27, 44, 60);
+	--primary-outlineColor: rgb(34, 52, 69);
+	--primary-radioBorderColorChecked: green;
+	--primary-radioBorderColor: rgb(78, 87, 78);
+}
+.inputGroup input {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	background: transparent;
+	font-size: inherit;
+	color: transparent;
+}
+
+.inputGroup input::placeholder {
+	color: transparent;
+}
+
+.inputGroup label {
+	width: 100%;
+}
+
+.inputGroup {
+	width: max-content;
+	position: relative;
+	min-height: var(--minHeight, 55px);
+	max-height: 55px;
+	padding-top: var(--paddingTop, 7px);
+	border: 2px solid var(--primary-borderColor, --inputBorder-color);
+	outline-offset: 3px;
+	outline: 1px solid var(--primary-outlineColor, --inputOutline-color);
+	background: var(--primary-backgroundColor, --inputBackground-color);
+	border-radius: 4px;
+	color: var(--primary-inputColor, --input-color);
+	font-size: 1.1rem;
+	box-sizing: content-box;
+}
+
+.inputGroupError .floatingLabel:before,
+.inputGroupError .startIcon {
+	color: var(--danger-color) !important;
+}
+
+.inputGroup[data-error] {
+	border: 1px solid var(--danger-color) !important;
+}
+
+.inputGroupErrorContainer,
+.inputGroupHintContainer {
+	padding-left: 2px;
+	position: absolute;
+	bottom: -4px;
+	transform: translateY(100%);
+	left: 5px;
+	font-size: 0.9rem;
+}
+
+.inputGroup:focus-within:has(input:not([type="radio"])) .floatingLabel:before,
+.inputGroup:has(input:valid) .floatingLabel:before {
+	transform: scale(0.7) translateY(-140%) translateX(-22%);
+	background-color: transparent !important;
+	height: auto;
+	color: var(--primary-focusColor, #000000) !important;
+	font-size: 1.5rem;
+}
+
+.inputGroup:has(input:valid) .startIcon,
+.inputGroup:focus-within .startIcon {
+	color: var(--primary-focusColor, --inputFocused-color);
+}
+
+.inputGroup:has(input:valid) input,
+.inputGroup:focus-within input {
+	color: var(---primary-inputColor, --input-color) !important;
+}
+
+.floatingLabel:before {
+	transition: transform 250ms;
+	content: attr(data-placeholder);
+	position: absolute;
+	color: var(--label-color) !important;
+	top: calc(50% + 2px);
+	transform: translateY(-50%);
+	pointer-events: none;
+	font-size: inherit;
+	font-weight: 600;
+	background: var(--inputBackground-color);
+	width: max-content;
+	height: max-content;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+/* Hide floating label for radio inputs */
+.inputGroup:has(input[type="radio"]) .floatingLabel:before {
+	display: none;
+	content: "";
+}
+
+/* Radio Input Styles */
+
+.radioInputContainer:has(input:checked) .radioInput {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgb(190, 255, 152);
+	background: linear-gradient(
+		315deg,
+		rgba(190, 255, 152, 1) 17%,
+		rgba(52, 182, 72, 1) 58%,
+		rgba(68, 162, 110, 1) 80%
+	);
+	outline: 2px solid var(--primary-radioBorderColorChecked);
+	outline-offset: 3px;
+}
+
+.radioInputContainer:has(input:not(checked)) .radioInput {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	outline: 2px solid var(--primary-radioBorderColor);
+	outline-offset: 3px;
+}
+
+.radioInput::after {
+	content: attr(data-placeholder);
+}
+
+.radioInputContainer {
+	position: relative;
+}
+
+.radioCheckBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}

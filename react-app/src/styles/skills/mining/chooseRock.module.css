@@ -1,0 +1,110 @@
+.chooseOreWrapper {
+  width: 100%;
+  padding: 0;
+  flex: 1;
+}
+.selectContainer {
+  width: 100%;
+
+  z-index: 10;
+  position: relative;
+}
+
+.selectContainer .item::before {
+  font-size: 10px;
+  font-family: ItemTitle;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.selectContainer * {
+  user-select: none;
+}
+
+.selectContainer::after {
+  content: "";
+  height: 2px;
+  background: rgb(30, 42, 54);
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+}
+
+.selectContainer .item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.selectContainer .item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom: 0px;
+}
+
+.selectContainer .item:last-child::after {
+  height: 0;
+}
+
+.item {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 2px solid rgb(14, 15, 16);
+  background: rgb(30, 42, 54);
+  background: linear-gradient(
+    270deg,
+    rgba(30, 42, 54, 1) 0%,
+    rgba(24, 35, 43, 1) 35%
+  );
+  padding: 5px;
+  z-index: 1;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.titleBar {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: #c0c0c0;
+  text-shadow: #2a2929 1px 1px 10px;
+  font-weight: bold;
+  width: 94%;
+  margin: auto;
+  font-size: 1.5rem;
+  text-align: center;
+  height: 50px;
+  position: relative;
+  top: 10px;
+  z-index: 1;
+  font-family: TitleFont2;
+}
+
+.itemTitle {
+  color: rgb(161, 161, 161);
+  font-family: ItemTitle;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: rgb(14, 16, 26) 1px 2px 2px;
+}
+
+.itemStat {
+  background: #182128;
+  border: 1px solid rgb(38, 50, 61);
+  color: rgb(126, 131, 134);
+  padding: 5px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.pointerArrow {
+  font-family: ArrowFont;
+  text-shadow: -1px 0px 0px rgb(15, 17, 19);
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(67, 90, 111);
+}
+.pointerArrow::after {
+  content: ">";
+}

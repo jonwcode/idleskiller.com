@@ -1,0 +1,18 @@
+.bg_light,
+.bg_dark {
+	margin: 2px;
+	padding: 5px;
+	border-radius: 10xpx;
+}
+.bg_dark {
+	background-color: var(--bg-secondary);
+	border-radius: 5px;
+}
+
+.playerInfoContainer {
+	color: var(--color-secondary);
+}
+
+.playerInfoContainer {
+	width: 100%;
+}

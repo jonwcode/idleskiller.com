@@ -1,0 +1,42 @@
+.container {
+	position: relative;
+	width: 150px;
+}
+.skillImg {
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 10px;
+	background: var(--background);
+	background: linear-gradient(180deg, var(--gradientColor_1) 58%, var(--gradientColor_2) 84%);
+	width: 50px;
+	height: 50px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border: 1px solid gold;
+	border-radius: 50%;
+}
+
+.level {
+	position: relative;
+	top: -5px;
+	font-size: 2rem;
+	margin-left: 5px;
+}
+
+.level::before {
+	content: "Lvl";
+	position: absolute;
+	top: -0px;
+	left: -3px;
+	font-size: 9px;
+}
+
+.skillEXP {
+	padding-left: 5px;
+	width: 100%;
+	background: var(--backgroundColor);
+	border: 1px solid var(--borderColor);
+	color: var(--color);
+	border-radius: 20px;
+	align-items: center;
+}

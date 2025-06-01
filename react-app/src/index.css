@@ -1,0 +1,149 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(69, 85, 103, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --primary-bg: #1c2834;
+  --bg-secondary: rgb(22, 34, 48);
+  --primary-shadow: rgb(29, 41, 56);
+  --primary-color: #ffffff;
+  --color-secondary: rgb(177, 177, 177);
+  --color-lighter: rgb(45, 68, 103);
+  --color-light: rgb(57, 87, 133);
+  --danger-color: rgb(146, 59, 41);
+}
+
+/* React Router DOm Framer Motion Class */
+.slide-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+button,
+a,
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Red with 50% opacity */
+}
+
+@font-face {
+  font-family: ItemTitle;
+  src: url(./assets/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: TitleFont2;
+  src: url(./assets/fonts/SourGummy-BlackItalic.ttf);
+}
+@font-face {
+  font-family: TitleFont;
+  src: url(./assets/fonts/Cairo-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: LogoFont;
+  src: url(./assets/fonts/DarumadropOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: SkillFont;
+  src: url(./assets/fonts/RussoOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArrowFont;
+  src: url(./assets/fonts/NanumGothicCoding-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #1c2834;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--inputBackground-color) inset !important;
+  /*use inset box-shadow to cover background-color*/
+  -webkit-text-fill-color: var(--input-color) !important;
+  /*use text fill color to cover font color*/
+  caret-color: var(--input-color) !important;
+  text-shadow: none;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 0px) AND (max-width: 600px) {
+  /* Mobile Screen Sizes */
+  body,
+  html {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* Mobile Screen Sizes */
+  body,
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid transparent;
+  -webkit-text-fill-color: #c3c8d3 !important;
+  caret-color: #c3c8d3 !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(27, 44, 60) inset;
+  transition: background-color 5000000s ease-in-out 0s;
+}
+
+.xbutton {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.xbutton::before,
+.xbutton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  transform-origin: center;
+}
+
+.xbutton::before {
+  transform: rotate(-45deg);
+}
+.xbutton::after {
+  transform: rotate(45deg);
+}

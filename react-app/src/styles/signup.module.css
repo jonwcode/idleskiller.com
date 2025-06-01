@@ -1,0 +1,36 @@
+.inputTitle {
+	margin: 10px 0px 7px 3px;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	min-height: 400px;
+}
+.radioInputs {
+	padding: 5px;
+}
+
+.bottomContainer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	flex: 1;
+}
+
+.bottomContainer button {
+	background: rgb(51, 136, 51);
+	background: linear-gradient(
+		56deg,
+		rgba(51, 136, 51, 1) 16%,
+		rgba(120, 189, 75, 0.790375525210084) 35%,
+		rgba(4, 166, 80, 0.9472382703081232) 75%
+	);
+	color: #ffffff;
+	font-weight: bold;
+	border: 0;
+	border-top: 1px solid green;
+	width: 100% !important;
+	height: 50px;
+	flex: 1;
+}

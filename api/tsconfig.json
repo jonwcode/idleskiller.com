@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"module": "ESNext", // Use ESNext module system (ES modules)
+		"target": "ESNext", // Compile to the latest ECMAScript version
+		"moduleResolution": "node", // Resolve modules using Node.js style
+		"esModuleInterop": true, // Enables interop between ES modules and CommonJS
+		"allowSyntheticDefaultImports": true, // Allows default imports from modules with no default export
+		"strict": false, // Enables strict type-checking
+		"skipLibCheck": true, // Skip type-checking declaration files (faster builds)
+		"outDir": "./dist", // Specifies output directory for compiled files
+		"baseUrl": "./src",
+		"resolveJsonModule": true,
+		"sourceMap": false,
+		"paths": {
+			"@ts/*": ["types/*"],
+			"@utils/*": ["utils/*"],
+			"@models/*": ["models/*"],
+			"@routes/*": ["routes/*"],
+			"@middleware/*": ["middleware/*"],
+			"@controllers/*": ["controllers/*"],
+			"@db": ["lib/database.ts"],
+			"@socket/*": ["socket/*"]
+		},
+		"allowImportingTsExtensions": true, // Allows importing TypeScript files without specifying the extension
+		"noEmit": true // Do not emit outputs
+	},
+	"include": ["src/**/*.ts"]
+}

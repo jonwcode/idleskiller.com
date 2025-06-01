@@ -1,0 +1,4 @@
+{
+	"custom_css_hot_reload.imports": ["file://Users/jon/insder-custom.css"],
+	"custom_css_hot_reload.hotReloadMode": "onSave"
+}
